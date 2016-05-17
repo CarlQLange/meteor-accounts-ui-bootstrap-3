@@ -77,6 +77,7 @@
 		{{> _forgotPasswordForm}}
 	{{else}}
 		{{> _loginButtonsMessages}}
+		<form autocomplete="on"></form>
 		{{#each fields}}
 			{{> _loginButtonsFormField}}
 		{{/each}}
@@ -87,6 +88,7 @@
 				{{i18n 'loginButtonsLoggedOutPasswordService.signIn'}}
 			{{/if}}
 		</button>
+		</form>
 		{{#if inLoginFlow}}
 			<div id="login-other-options">
 			{{#if showForgotPasswordLink}}
@@ -120,7 +122,6 @@
 
 <template name="_loginButtonsFormField">
 	{{#if visible}}
-		<!-- TODO: Implement more input types -->
 		{{#if equals inputType "checkbox"}}
 			<div class="checkbox">
 				<label><input type="checkbox" id="login-{{fieldName}}" name="login-{{fieldName}}" value="true">
@@ -159,7 +160,7 @@
 		{{/if}}
 
 		{{#if inputTextual}}
-			<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
+			<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" autocomplete="on" />
 		{{/if}}
 	{{/if}}
 </template>
