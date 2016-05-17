@@ -1,7 +1,7 @@
 Package.describe({
   name: 'csl:accounts-ui-bootstrap-3',
   summary: 'Bootstrap-styled accounts-ui with multi-language support. *this branch is not supported*',
-  version: '1.2.89-autocomplete',
+  version: '1.2.89-autocomplete-2',
   git: "https://github.com/CarlQLange/meteor-accounts-ui-bootstrap-3"
 })
 
